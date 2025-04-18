@@ -1,0 +1,114 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 263.4 70% 50.4%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+    --radius: 0.5rem;
+  }
+
+  * {
+    @apply border-border selection:bg-purple-500/10 selection:text-white;
+  }
+
+  body {
+    @apply bg-black text-player-text antialiased overflow-x-hidden;
+    font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03";
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+  
+  /* Prevent text selection and cursor on non-editable elements */
+  .no-text-select {
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+  }
+  
+  h1, h2, h3, h4, h5, h6, p, span, div:not([contenteditable="true"]), 
+  button, a, li, ul, ol, img, svg, .card-title, .section-title,
+  .album-name, .artist-name, .track-title, .playlist-name {
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    cursor: default;
+  }
+
+  /* Preserve normal cursor for interactive elements */
+  button, a, input, textarea, select, [role="button"] {
+    cursor: pointer;
+  }
+  
+  input, textarea, select, [contenteditable="true"] {
+    user-select: text;
+    -webkit-user-select: text;
+    -ms-user-select: text;
+    cursor: text;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .hover-effect {
+    @apply transition-all duration-200 hover:bg-white/10 hover:scale-[1.02];
+  }
+  
+  .album-card {
+    @apply rounded-md overflow-hidden bg-player-surface p-4 hover-effect;
+  }
+  
+  .text-truncate {
+    @apply overflow-hidden whitespace-nowrap text-ellipsis;
+  }
+
+  /* New utility classes for the updated design */
+  .sidebar-item {
+    @apply flex items-center gap-3 py-2 px-4 rounded-md transition-colors;
+  }
+
+  .sidebar-item-active {
+    @apply bg-player-menuActive text-player-sidebarActive;
+  }
+
+  .sidebar-item-inactive {
+    @apply text-player-textSecondary hover:text-player-text hover:bg-white/5;
+  }
+
+  .genre-card {
+    @apply relative overflow-hidden rounded-md cursor-pointer transition-all duration-300 hover:scale-105;
+  }
+  
+  .genre-card-overlay {
+    @apply absolute bottom-0 left-0 right-0 p-3 bg-black bg-opacity-60;
+  }
+}
