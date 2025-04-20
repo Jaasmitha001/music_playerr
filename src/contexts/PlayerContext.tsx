@@ -44,7 +44,6 @@ export function PlayerProvider({ children }: { children: ReactNode }) {
   };
 
   const prevTrack = () => {
-    // In a real player, you'd implement history
     console.log("Previous track");
   };
 

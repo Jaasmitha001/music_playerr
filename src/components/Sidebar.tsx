@@ -1,4 +1,3 @@
-
 import { Home, Headphones, MessageSquare, Users, Settings, HelpCircle, User } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { usePlayer } from "../contexts/PlayerContext";
@@ -32,7 +31,7 @@ export function Sidebar({ className = "" }: SidebarProps) {
       title: "Live Chat",
       icon: <MessageSquare size={18} />,
       path: "/chat",
-      badge: "3", // This is for the badge shown in the image
+      badge: "3",
     },
     {
       title: "Friends",

@@ -53,7 +53,6 @@ const Settings = () => {
       return;
     }
     
-    // In a real app, call API to change password
     toast({
       title: "Password updated",
       description: "Your password has been updated successfully.",

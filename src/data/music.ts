@@ -48,29 +48,29 @@ export const categories: Category[] = [
 export const albums: Album[] = [
   {
     id: 'album1',
-    title: 'Echoes of Midnight',
+    title: 'City Afterglow',
     artist: 'Jon Hickman',
-    coverUrl: '/lovable-uploads/7207ee15-214a-4f6e-8acb-41675cc63e5a.png',
+    coverUrl: 'https://images.unsplash.com/photo-1521336575822-6da63fb45455?q=80&w=300&h=300&auto=format&fit=crop',
     year: 2023,
     genre: 'Electronic',
     tracks: [
       {
         id: 'track1',
-        title: 'Echoes of Midnight',
+        title: 'Afterglow Skyline',
         artist: 'Jon Hickman',
         duration: 238,
         albumId: 'album1',
         url: '#',
-        coverUrl: '/lovable-uploads/7207ee15-214a-4f6e-8acb-41675cc63e5a.png'
+        coverUrl: 'https://images.unsplash.com/photo-1521336575822-6da63fb45455?q=80&w=300&h=300&auto=format&fit=crop'
       },
       {
         id: 'track2',
-        title: 'Urban Waves',
+        title: 'Downtown Pulse',
         artist: 'Jon Hickman',
         duration: 197,
         albumId: 'album1',
         url: '#',
-        coverUrl: '/lovable-uploads/7207ee15-214a-4f6e-8acb-41675cc63e5a.png'
+        coverUrl: 'https://images.unsplash.com/photo-1521336575822-6da63fb45455?q=80&w=300&h=300&auto=format&fit=crop'
       }
     ]
   },

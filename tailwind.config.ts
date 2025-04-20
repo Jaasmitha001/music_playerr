@@ -66,12 +66,12 @@ export default {
 				player: {
 					background: '#121212',
 					surface: '#181818',
-					highlight: '#bb3bf9', // Updated to match the purple in the image
+					highlight: '#bb3bf9',
 					text: '#FFFFFF',
 					textSecondary: '#B3B3B3',
 					sidebar: '#000000',
 					sidebarActive: '#bb3bf9',
-					menuActive: '#1A0B23', // Dark purple background for selected menu
+					menuActive: '#1A0B23',
 				}
 			},
 			borderRadius: {

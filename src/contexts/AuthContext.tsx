@@ -6,7 +6,7 @@ interface User {
   name: string;
   email: string;
   avatarUrl: string;
-  bio?: string; // Added bio as optional field
+  bio?: string;
 }
 
 interface AuthContextType {
@@ -15,7 +15,7 @@ interface AuthContextType {
   signup: (name: string, email: string, password: string) => Promise<void>;
   logout: () => void;
   isAuthenticated: boolean;
-  updateProfile: (data: {name?: string; bio?: string}) => void; // Added updateProfile method
+  updateProfile: (data: {name?: string; bio?: string}) => void;
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -32,8 +32,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   }, []);
 
   const login = async (email: string, password: string) => {
-    // This is a mock login - in a real app, you would validate with an API
-    // For demo purposes we'll accept any valid-looking email and password combination
+    // For demo purposes I'll accept any valid-looking email and password combination
     if (email && password && email.includes('@')) {
       const mockUser: User = {
         id: "user1",
@@ -93,7 +92,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         signup,
         logout,
         isAuthenticated: !!user,
-        updateProfile, // Include the new function in the context value
+        updateProfile,
       }}
     >
       {children}

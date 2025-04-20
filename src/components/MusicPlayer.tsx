@@ -29,7 +29,6 @@ export function MusicPlayer() {
     if (!currentTrack || !audioRef.current) return;
     
     // In a real app, we would set the audio source to the track's URL
-    // For now, we'll use a demo audio file
     audioRef.current.src = "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3";
     
     if (isPlaying) {
